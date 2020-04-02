@@ -1,0 +1,19 @@
+terraform init
+terraform validate
+terraform plan
+terraform apply
+terraform destroy
+terraform taint
+terraform untaint
+terraform show
+terraform apply -var 'ext_port=8080'
+terraform apply -var 'container_name=ghost_blog' -var 'ext_port=8080'
+terraform destroy -var 'ext_port=8080'
+terraform plan -out=tfdev_plan -var env=dev
+terraform plan -out=tfprod_plan -var env=prod
+terraform workspace new dev
+terraform workspace select dev
+terraform workspace list
+terraform workspace show
+
+terraform destroy -auto-approve
